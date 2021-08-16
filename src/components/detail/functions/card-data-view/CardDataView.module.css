@@ -1,0 +1,37 @@
+.viewDataCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    max-width: 450px;
+    padding: 10px;
+    margin: 10px;
+    border: 1px gray solid;
+    border-radius: 5px;
+}
+.flexRow{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    padding: 0 10px;
+}
+
+.flexRow__linkImg{
+    width: 70px;
+    transition: 0.5s;
+}
+
+.flexRow__linkImg:hover{
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.smallIcon {
+    width: 30px;
+    height: auto;
+}
+
+
+
+

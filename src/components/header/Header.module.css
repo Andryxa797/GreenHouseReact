@@ -1,0 +1,45 @@
+.header {
+    background: linear-gradient(to left, rgb(72, 199, 13), rgb(141, 190, 60));
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+
+    transition: 0.8s;
+}
+
+.headerNarrow{
+    padding: 0;
+    font-size: 1rem;
+}
+
+.logo a{
+    font-family: 'Kaushan Script', sans-serif;
+    color: #ffffff;
+    font-size: 2.5rem;
+    text-decoration: none;
+}
+.logo a:hover{
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.auth {
+    color: white;
+    font-size: 1.0rem;
+    font-family: 'Roboto Slab', sans-serif;
+    padding: 15px 0;
+}
+
+.menuIcon {
+    width: 45px;
+    padding: 10px;
+    margin: 0 15px;
+    fill: white;
+}
+
+@media (max-width: 940px){
+
+}

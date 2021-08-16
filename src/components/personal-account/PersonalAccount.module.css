@@ -1,0 +1,102 @@
+.leftColumn {
+    width: 430px;
+    margin-bottom: 10px;
+
+}
+
+.rightColumn {
+    width: 750px;
+    margin-bottom: 10px;
+}
+
+.containerInherit {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.photo {
+    object-fit: cover;
+    width: 100%;
+    height: 300px;
+
+    border-radius: 5px;
+    margin-bottom: 5px;
+
+    transition: 0.5s;
+}
+
+.file {
+    opacity: 0;
+    width: 0.1px;
+    height: 0.1px;
+    position: absolute;
+}
+
+.fileInput {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+}
+
+
+.titleName {
+    width: 100%;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.subtitleName {
+    width: 100%;
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+
+.btn {
+    margin-top: 15px;
+    background: rgb(141, 190, 60);
+    color: white;
+    border: none;
+    border-radius: 5px;
+
+    font-size: 1.2rem;
+    width: 100%;
+
+    padding: 10px 12px;
+}
+
+.btn:hover {
+    background: rgb(126, 168, 53);
+    cursor: pointer;
+}
+
+@media (max-width: 1180px) {
+    .leftColumn {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .rightColumn {
+        width: 100%;
+        max-width: 800px;
+    }
+
+    .containerInherit {
+        justify-content: center;
+    }
+    .photo {
+        height: 400px;
+    }
+}
+
+@media (max-width: 395px) {
+
+    .titleName {
+        font-size: 1.0rem;
+    }
+}

@@ -1,0 +1,29 @@
+.fieldRow {
+    margin-bottom: 10px;
+}
+
+.containerLabel {
+    width: 100%;
+    text-align: left;
+    margin-bottom: 5px;
+}
+
+.label {
+    width: 100%;
+    font-size: 1.1rem;
+}
+
+.input {
+    width: 100%;
+    padding: 6px 12px;
+    font-size: 1.1rem;
+
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    font-family: 'Roboto Slab', sans-serif;
+}
+
+.input:focus {
+    outline: none;
+    border: 1px solid #9adb3e;
+}
