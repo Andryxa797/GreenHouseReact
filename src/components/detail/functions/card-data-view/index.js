@@ -9,27 +9,17 @@ let CardDataView = ({title, link, ...props}) => {
     return (
         <div className={style.viewDataCard}>
             <div className={style.flexRow}>
-                <div>
-                    <img className={style.smallIcon} src={temperature} alt=""/>
-                </div>
-                <div>
-                    {title}
-                </div>
+                <div><img className={style.smallIcon} src={temperature} alt=""/></div>
+                <div>{title}</div>
             </div>
-            <div className={style.flexRow}>
-                <div>
-                    <NavLink to={props.location.pathname + link + '/chart'}> <img className={style.flexRow__linkImg} src={chart}
-                                                                                  alt=""/></NavLink>
-
-                </div>
-                <div>
-                    <NavLink to={props.location.pathname + link + '/table'}> <img className={style.flexRow__linkImg} src={table}
-                                                                                  alt=""/></NavLink>
-                </div>
-            </div>
-
+            <div className="btnNormal"><NavLink to={props.location.pathname + link + '/data'}> Просмотр</NavLink></div>
         </div>
     )
 }
 CardDataView = withRouter(CardDataView)
 export {CardDataView}
+
+// {/*<div className={style.flexRow}>*/}
+// {/*    <div><img className={style.flexRow__linkImg} src={chart} alt=""/></div>*/}
+// {/*    <div><img className={style.flexRow__linkImg} src={table} alt=""/></div>*/}
+// {/*</div>*/}

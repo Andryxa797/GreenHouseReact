@@ -11,19 +11,20 @@ import {initializeAppTC} from "./thunk";
 import {PersonalAccountPage} from "./conteiners/personal-account";
 import {RegisterPage} from "./conteiners/register";
 import {DetailPage} from "./conteiners/detail";
-import {TableData as Table} from "./components/table";
+import {TablePage} from "./conteiners/data";
+import {routePath} from "./common/route/route";
 
 function App({isInitializationApp, initializeAppTC, isLogin}) {
 
     useEffect(() => initializeAppTC(isLogin), [isLogin])
     const main = (
         <main className="main">
-            <Route exact path="/"><HomePage/></Route>
-            <Route exact path="/detail/:id"><DetailPage/></Route>
-            <Route path="/detail/:id/:view/table"><Table/></Route>
-            <Route path="/register"><RegisterPage/></Route>
-            <Route path="/login"><LoginPage/></Route>
-            <Route path="/lk"><PersonalAccountPage/></Route>
+            <Route exact path={routePath.HomePage.home}><HomePage/></Route>
+            <Route exact path={routePath.Detail.detail}><DetailPage/></Route>
+            <Route path={routePath.Table.table}><TablePage/></Route>
+            <Route path={routePath.Auth.register}><RegisterPage/></Route>
+            <Route path={routePath.Auth.login}><LoginPage/></Route>
+            <Route path={routePath.PersonalAccount.personalAccount}><PersonalAccountPage/></Route>
         </main>)
 
 

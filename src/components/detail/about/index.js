@@ -1,26 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import style from './About.module.css'
 import img from './../../../assert/img/grass.jpg'
+import {TariffPlanTable} from "./trafic-plan-table";
 
-const TariffPlanTable = ({tariffPlan}) => {
-    const rowTable = (value, text) => value ? <div>{text} - {value} шт</div> : null
-    return tariffPlan ? (
-        <tr>
-            <td>Доступно:</td>
-            <td className={style.table_list}>
-                {rowTable(tariffPlan.number_sensors_temperature_air, 'Д. температуры воздуха')}
-                {rowTable(tariffPlan.number_sensors_temperature_soil, 'Д. температуры почвы')}
-                {rowTable(tariffPlan.number_sensors_humidity_air, 'Д. влажности воздуха')}
-                {rowTable(tariffPlan.number_sensors_humidity_soil, 'Д. влажность почвы')}
-                {rowTable(tariffPlan.number_windows_open, 'Управляемые окна')}
-                {rowTable(tariffPlan.number_pumps, 'Управляемые насосы')}
-                {rowTable(tariffPlan.number_heaters, 'Управляемые обогреватели')}
-                {rowTable(tariffPlan.number_additional_loads, 'Дополнительные нагрузки')}
-            </td>
-        </tr>
-    ) : null
-
-}
 
 const DescriptionTableRow = (value, text) => {
     return value ? (
@@ -42,13 +24,12 @@ const About = ({profile, tariffPlan}) => {
                     </div>
                 </div>
                 <div className={style.card__right}>
-                    <div className={style.titleTable}>
-                        Описание
-                    </div>
+                    <div className={style.titleTable}>Описание</div>
                     <table className="table">
                         {profile && DescriptionTableRow(profile.number_telephone, 'Номер телофона:')}
-                        {profile && (profile.country || profile.city || profile.address) &&
-                        DescriptionTableRow(`${profile.country} ${profile.city} ${profile.address}`, 'Адресс:')}
+                        {profile && DescriptionTableRow(profile.country, 'Страна:')}
+                        {profile && DescriptionTableRow(profile.city, 'Город:')}
+                        {profile && DescriptionTableRow(profile.address, 'Адрес:')}
                         <TariffPlanTable tariffPlan={tariffPlan}/>
                     </table>
                 </div>

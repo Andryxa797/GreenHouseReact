@@ -32,6 +32,13 @@
     height: auto;
 }
 
-
+div a{
+    text-decoration: none;
+    color: white;
+}
+div a:hover{
+    color: white;
+    cursor: pointer;
+}
 
 

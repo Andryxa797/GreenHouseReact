@@ -1,4 +1,5 @@
 import axios from "axios";
+import {routePath} from "../common/route/route";
 
 const token = () => {
     return localStorage.getItem('accessTokenJWT')
@@ -6,7 +7,7 @@ const token = () => {
 
 const instance = (token) => {
     return axios.create({
-        baseURL: 'http://172.20.10.2:8000',
+        baseURL: 'http://127.0.0.1:8000',
         headers: {Authorization: `Bearer ${token}`}
     });
 }
@@ -77,10 +78,7 @@ export const GreenhouseAPI = {
     },
 }
 export const GreenhouseDataAPI = {
-    temperatureAir: (id) => {
-        return instance(localStorage.getItem('accessTokenJWT')).get(`greenhouse/temperature-air/${id}`)
-    },
-    temperatureSoil: (id) => {
-        return instance(localStorage.getItem('accessTokenJWT')).get(`greenhouse/temperature-soil/${id}`)
-    },
+    dataApi: (params, id, paginationCurrent, pageSize) => {
+        return instance(localStorage.getItem('accessTokenJWT')).get(`greenhouse/${params}/${id}?page=${paginationCurrent}&page_size=${pageSize}`)
+    }
 }

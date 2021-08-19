@@ -12,12 +12,14 @@ const SettingUserProfile = ({setUserProfileTC, ...props}) => {
 
     return (
         <div className={style.rightColumn}>
-            <div className="cardMain">
-                <div className="cardHeader">
-                    Настройки пользователя
-                </div>
-                <div className="cardBody">
-                    <ProfileForm {...props} onSubmit={submit}/>
+            <div className="card">
+                <div className="cardInherit">
+                    <div className="cardHeader">
+                        Настройки пользователя
+                    </div>
+                    <div className="cardBody">
+                        <ProfileForm {...props} onSubmit={submit}/>
+                    </div>
                 </div>
             </div>
         </div>

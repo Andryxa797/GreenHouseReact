@@ -26,7 +26,7 @@ const FormRegister = (props) => {
     const {handleSubmit, error, invalid, submitting, pristine} = props
 
     return (
-        <form onSubmit={handleSubmit} className="cardMain" style={{width:"100%", maxWidth: "320px"}}>
+        <form onSubmit={handleSubmit} className="cardInherit" style={{width:"100%", maxWidth: "320px"}}>
             <div className="cardBody">
                 <div className={style.formTitle}>Регистрация</div>
                 <Field placeholder="Логин" name="username" component={renderFieldLogin} type="text"/>

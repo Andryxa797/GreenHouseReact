@@ -8,7 +8,7 @@ import {Preloader} from "../../common/preloader";
 const FormLogin = (props) => {
     const {handleSubmit, error, submitting} = props
     return (
-        <form onSubmit={handleSubmit} className="cardMain"  style={{width:"100%", maxWidth: "320px"}}>
+        <form onSubmit={handleSubmit} className="cardInherit" style={{width:"100%", maxWidth: "320px"}}>
             <div className="cardBody">
                 <div style={{marginBottom: "30px"}}><img className={style.formImg} src={iconNavigator} alt=""/></div>
                 <Field placeholder="Логин" name="username" component={renderFieldLogin} type="text" />
